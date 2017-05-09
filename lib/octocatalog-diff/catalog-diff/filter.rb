@@ -3,6 +3,7 @@ require_relative 'filter/absent_file'
 require_relative 'filter/array_single_value'
 require_relative 'filter/compilation_dir'
 require_relative 'filter/json'
+require_relative 'filter/string_int'
 require_relative 'filter/yaml'
 
 require 'stringio'
@@ -14,7 +15,7 @@ module OctocatalogDiff
       attr_accessor :logger
 
       # List the available filters here (by class name) for use in the validator method.
-      AVAILABLE_FILTERS = %w(AbsentFile ArraySingleValue CompilationDir JSON YAML).freeze
+      AVAILABLE_FILTERS = %w(AbsentFile ArraySingleValue CompilationDir JSON StringInt YAML).freeze
 
       # Public: Determine whether a particular filter exists. This can be used to validate
       # a user-submitted filter.
